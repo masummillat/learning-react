@@ -4,10 +4,15 @@ import  AddColorForm from './AddColorForm'
 import  StarRating from './StarRating'
 // import  Recipe from './Recipe';
 // import  MemberList from './MemberList'
-// import  HiddenMessages from './HiddenMessages'
+import  HiddenMessages from './HiddenMessages'
 import CountryList from './CountryList'
-
+import CountryDropDown from './CountryDropDown'
 import RandomMeUser from './RandomMeUser'
+import PopUpButton from './MenuButton'
+import Clock from './Clock'
+// import {  unmountComponentAtNode } from 'react-dom'
+const target = document.getElementById('clock')
+
 
 const  Main = ({recipes})=>{
    return(
@@ -37,6 +42,20 @@ const  Main = ({recipes})=>{
            {/*<CountryList/>*/}
            {/*<Timeline name="History of Skiing" data={historicDatesForSkiing}/>*/}
             <RandomMeUser/>
+           <CountryDropDown selected="United States"/>
+           <HiddenMessages hidden={true}>
+               This is a hidden message
+           </HiddenMessages>
+
+           <PopUpButton hidden={true} txt="toggle pop">
+               <h1>Hidden Content</h1>
+               <p>This content will start fo hidden</p>
+           </PopUpButton>
+           <div id="clock">
+
+           </div>
+
+           <Clock  />
        </article>
 
    )
